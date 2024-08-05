@@ -1,4 +1,4 @@
-# MF_PH_Mitochondria
+# Morphological multiparameter filtration and persistent homology in mitochondrial image analysis
 
 Implementation of the paper "Morphological multiparameter filtration and persistent homology in mitochondrial image analysis" by Yu-Min Chung, Chuan-Shen Hu, Emily Sun, Henry C. Tseng
 
