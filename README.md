@@ -18,7 +18,11 @@ Last released date 2024.08.05 (Matlab version)
 ### Code Environment
 
 The code for computing the connectivity index of an input image with threshold T. 
-###
+
+### Code Description
+
+```matlab
+````
 
 The code for computing the normalized Betti number curve of a given image, based on the opening operations.
 
