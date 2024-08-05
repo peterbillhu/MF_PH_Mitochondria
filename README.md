@@ -13,7 +13,7 @@ There are a total of 15 grayscale images in the folder "data," encoded in the Po
 ## Released Code
 
 ### Code Versions
-Last released date 2024.08.05 (Matlab version)
+Last released date (YYYY.MM.DD): 2024.08.05 (Matlab version)
 
 ### Code Environment
 
