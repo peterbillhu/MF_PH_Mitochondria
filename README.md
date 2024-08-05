@@ -11,8 +11,11 @@ The complexity of branching and curvilinear morphology of a complete mitochondri
 There are a total of 15 grayscale images in the folder "data," encoded in the Portable Network Graphics (PNG) format, which can be freely accessed. Images classified as WT and KO are stored in the repository in their respective folders ("data/WT" and "data/KO"). Please contact the authors if further technical support is needed.
 
 ## Code Description
-The code for computing the connectivity index of an input image with threshold T. 
 
+### Code Environment
+
+The code for computing the connectivity index of an input image with threshold T. 
+###
 
 The code for computing the normalized Betti number curve of a given image, based on the opening operations.
 
