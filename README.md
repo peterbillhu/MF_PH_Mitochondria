@@ -2,6 +2,10 @@
 
 Implementation of the paper "Morphological multiparameter filtration and persistent homology in mitochondrial image analysis" by Yu-Min Chung, Chuan-Shen Hu, Emily Sun, Henry C. Tseng
 
+![image](https://github.com/user-attachments/assets/f9e53644-d90e-4407-b679-bfba70e7b81c)
+
+
+
 ## Image Data
 There are a total of 15 grayscale images in the folder "data," encoded in the Portable Network Graphics (PNG) format, which can be freely accessed. Images classified as WT and KO are stored in the repository in their respective folders ("data/WT" and "data/KO"). Please contact the authors if further technical support is needed.
 
