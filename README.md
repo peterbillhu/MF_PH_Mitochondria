@@ -10,7 +10,10 @@ The complexity of branching and curvilinear morphology of a complete mitochondri
 ## Image Data
 There are a total of 15 grayscale images in the folder "data," encoded in the Portable Network Graphics (PNG) format, which can be freely accessed. Images classified as WT and KO are stored in the repository in their respective folders ("data/WT" and "data/KO"). Please contact the authors if further technical support is needed.
 
-## Code Description
+## Released Code
+
+### Code Versions
+Last released date 2024.08.05 (Matlab version)
 
 ### Code Environment
 
