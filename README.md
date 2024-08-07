@@ -57,9 +57,9 @@ where the object img is a matrix by using **imread()** and T is a given image th
 
 ## Statistical Analysis
 
-Hypothesis tests of the proposed features of the sampled WT and KO mitochondria images can be demonstrated by the following example codes. The statistics of the hypothesis tests are the average values of the WT and KO curves over the range $[a, b]$, where the ranges are selected as [100, ], based on the behaviors of NBC, SD, and CI. The test samples consist of 5 curves each from WT and KO mitochondria images.  The null hypothesis, \( H_0 \), states that the distribution of mean values of the WT and KO curves over the range \([a, b]\) are the same. The permutation hypothesis test is performed by the python package {\tt {mlxtend}}~\cite{raschkas_2018_mlxtend}. The $p$-value serves as the target value for determining the test results, and the decision value $\alpha$ is set to be $0.05$. The hypotheses are repeated $100$ times with different random seeds, and average values and standard deviations present the results. Folder ``computed_features'' contains the computed NBC, SD, and CI of WT and KO mitochondria images. The following are Python code for the demonstrations.
+Hypothesis tests of the proposed features of the sampled WT and KO mitochondria images can be demonstrated by the following example codes. The statistics of the hypothesis tests are the average values of the WT and KO curves over the range $[a, b]$, where the ranges are selected as [100, ], based on the behaviors of normalized Betti curves, size distributions, and connectivity index curves. The test samples consist of 5 curves each from WT and KO mitochondria images.  The null hypothesis, \( H_0 \), states that the distribution of mean values of the WT and KO curves over the range \([a, b]\) are the same. The permutation hypothesis test is performed by the python package {\tt {mlxtend}}~\cite{raschkas_2018_mlxtend}. The $p$-value serves as the target value for determining the test results, and the decision value $\alpha$ is set to be $0.05$. The hypotheses are repeated $100$ times with different random seeds, and average values and standard deviations present the results. Folder ``computed_features'' contains the computed normalized Betti curves, size distributions, and connectivity index curves of WT and KO mitochondria images. The following is Python code for the demonstrations.
 
-Permutation test for the NBC curve $\rho_1^{H,3}$ (with key values 'r_pc_KO_o3' and 'r_pc_WT_o3')
+### Permutation test for the NBC curve $\rho_1^{H,3}$ (with key values 'r_pc_KO_o3' and 'r_pc_WT_o3')
 
 ```python
 from scipy.io import loadmat
@@ -117,9 +117,11 @@ else:
   print("Fail to reject the null hypothesis")
 ````
 
+### Permutation test for the  $\phi(D_{128})(s)$
 
+````python
 
-
+````
 
 ## References
 [1] Konstantin Mischaikow and Vidit Nanda. Morse Theory for Filtrations and Efficient Computation of Persistent Homology. Discrete & Computational Geometry, Volume 50, Issue 2, pp 330-353, September 2013.
