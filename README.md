@@ -23,14 +23,23 @@ For the persistent homology computation, the software Perseus (https://people.ma
 
 ### Code Description
 
+The folder ``code'' consists of four Matlab M files: **ConnectivityIndex.m**, **NormalizedBettiNumberCurve.m**, **SizeDistrBettiNumber.m**, and **runPerseus.m**, where **runPerseus.m** is the code for computing the pesistent homology of cubical complexes (i.e., image data). Especially, the command 
+
+```matlab
+cmd = ['././perseusWin cubtop ' fname ' ' fname]
+````
+
+as a string in Matlab is 
+
+
+
 
 
 
 The code for computing the connectivity index of an input image with threshold T. 
 
 
-```matlab
-````
+
 
 The code for computing the normalized Betti number curve of a given image, based on the opening operations.
 
