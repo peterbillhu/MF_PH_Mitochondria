@@ -17,9 +17,17 @@ Last released date (YYYY.MM.DD): 2024.08.05 (Matlab version)
 
 ### Code Environment
 
-The code for computing the connectivity index of an input image with threshold T. 
+The code is programmed in Matlab version 2019 and can be run on both Windows and Mac systems. 
+
+For the persistent homology computation, the software Perseus (https://people.maths.ox.ac.uk/nanda/perseus/index.html) [1] is utilized. To ensure the calculation of persistent homology can be performed on your system, please download the executable file from the website that corresponds to your operating system (Windows, Mac, or Linux). The released code (**runPerseus.m**) version (2024.08.05) is designed to run on the Windows system. See the code description for more details.
 
 ### Code Description
+
+
+
+
+The code for computing the connectivity index of an input image with threshold T. 
+
 
 ```matlab
 ````
