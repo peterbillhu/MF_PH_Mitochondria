@@ -70,7 +70,7 @@ import random
 from scipy import stats
 from mlxtend.evaluate import permutation_test
 
-D = loadmat("Mitochondial_data/NormalizedBettiCurvesWTKO.mat")
+D = loadmat("computed_features/NormalizedBettiCurvesWTKO.mat")
 ## dict_keys(['__header__', '__version__', '__globals__', 'r_pc_KO', 'r_pc_KO_o3', 'r_pc_KO_o5', 'r_pc_WT', 'r_pc_WT_o3', 'r_pc_WT_o5'])
 
 ################################################################################
@@ -133,8 +133,8 @@ from mlxtend.evaluate import permutation_test
 N = 5
 alpha = 0.05
 
-file_name_size_distribution_KO = 'Mitochondial_data/size_dist_KO.csv'
-file_name_size_distribution_WT = 'Mitochondial_data/size_dist_WT.csv'
+file_name_size_distribution_KO = 'computed_features/size_dist_KO.csv'
+file_name_size_distribution_WT = 'computed_features/size_dist_WT.csv'
 
 #sheet =  # sheet name or sheet number or list of sheet numbers and names
 #df = pd.read_excel(file_name, sheet_name=sheet)
@@ -196,8 +196,8 @@ from mlxtend.evaluate import permutation_test
 N = 5
 alpha = 0.05
 
-file_name_CI_KO = 'Mitochondial_data/Connectivity_index_KO.csv'
-file_name_CI_WT = 'Mitochondial_data/Connectivity_index_WT.csv'
+file_name_CI_KO = 'computed_features/Connectivity_index_KO.csv'
+file_name_CI_WT = 'computed_features/Connectivity_index_WT.csv'
 
 #sheet =  # sheet name or sheet number or list of sheet numbers and names
 #df = pd.read_excel(file_name, sheet_name=sheet)
