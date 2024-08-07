@@ -31,19 +31,17 @@ cmd = ['././perseusWin cubtop ' fname ' ' fname]
 
 as a string in Matlab. Specifically, this command is used to call the executable file of the Perseus software. Note that this command is for the Windows version of the Perseus software. If you are using Perseus on a Mac system, please download the **perseusMac** file from the official Perseus website and update the command accordingly. Please also ensure that the executable Perseus file is located in the same folder as the four M files.
 
+The M file **NormalizedBettiNumberCurve.m** defines a Matlab function to compute the Normalized Betti Number Curve of a given image based on the opening operations.
 
+```matlab
+NormalizedBettiNumberCurve(img, O)
+````
 
-
-
-
+where the object img is a matrix by using **imread()** and O is the size of the structuring element. Here, the base structuring element is assumed to be an $o \times o$ square.
 
 
 The code for computing the connectivity index of an input image with threshold T. 
 
-
-
-
-The code for computing the normalized Betti number curve of a given image, based on the opening operations.
 
 
 The code for computing the size distribution of Betti numbers of a given image and the threshold.
