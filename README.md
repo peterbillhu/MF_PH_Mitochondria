@@ -15,7 +15,7 @@ There are a total of 15 grayscale images in the folder "data," encoded in the Po
 ### Code Versions
 Last released date (YYYY.MM.DD): 2024.08.05 (Matlab version)
 
-### Code Environment
+### Code Dependence
 
 The code is programmed in Matlab version 2019 and can be run on both Windows and Mac systems. 
 
