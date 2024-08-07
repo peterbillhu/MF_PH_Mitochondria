@@ -39,12 +39,21 @@ NormalizedBettiNumberCurve(img, O)
 
 where the object img is a matrix by using **imread()** and O is the size of the structuring element. Here, the base structuring element is assumed to be an O $\times$ O square.
 
+The M file **SizeDistrBettiNumber.m** defines a Matlab function to compute the Size Distribution of Betti Numbers of a given image based on the opening filtration.
 
-The code for computing the connectivity index of an input image with threshold T. 
+```matlab
+SDB = SizeDistrBettiNumber(img, T)
+````
 
+where the object img is a matrix by using **imread()** and T is a given image threshold from 0, 1, ..., to 255.
 
+The M file **ConnectivityIndex.m** defines a Matlab function to compute the Connectivity Index of a given image based on the opening filtration.
 
-The code for computing the size distribution of Betti numbers of a given image and the threshold.
+```matlab
+CI = ConnectivityIndex(img, T)
+````
+
+where the object img is a matrix by using **imread()** and T is a given image threshold from 0, 1, ..., to 255.
 
 ## References
 [1] Konstantin Mischaikow and Vidit Nanda. Morse Theory for Filtrations and Efficient Computation of Persistent Homology. Discrete & Computational Geometry, Volume 50, Issue 2, pp 330-353, September 2013.
