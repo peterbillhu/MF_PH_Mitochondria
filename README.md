@@ -23,13 +23,15 @@ For the persistent homology computation, the software Perseus (https://people.ma
 
 ### Code Description
 
-The folder ``code'' consists of four Matlab M files: **ConnectivityIndex.m**, **NormalizedBettiNumberCurve.m**, **SizeDistrBettiNumber.m**, and **runPerseus.m**, where **runPerseus.m** is the code for computing the pesistent homology of cubical complexes (i.e., image data). Especially, the command 
+The folder ``code'' consists of four Matlab M files: **ConnectivityIndex.m**, **NormalizedBettiNumberCurve.m**, **SizeDistrBettiNumber.m**, and **runPerseus.m**, where **runPerseus.m** is the code for computing the persistent homology of cubical complexes (i.e., image data). 
 
 ```matlab
 cmd = ['././perseusWin cubtop ' fname ' ' fname]
 ````
 
-as a string in Matlab is 
+as a string in Matlab. Specifically, this command is used to call the executable file of the Perseus software. Note that this command is for the Windows version of the Perseus software. If you are using Perseus on a Mac system, please download the **perseusMac** file from the official Perseus website and update the command accordingly. Please also ensure that the executable Perseus file is located in the same folder as the four M files.
+
+
 
 
 
