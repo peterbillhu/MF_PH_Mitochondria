@@ -37,7 +37,7 @@ The M file **NormalizedBettiNumberCurve.m** defines a Matlab function to compute
 NormalizedBettiNumberCurve(img, O)
 ````
 
-where the object img is a matrix by using **imread()** and O is the size of the structuring element. Here, the base structuring element is assumed to be an $o \times o$ square.
+where the object img is a matrix by using **imread()** and O is the size of the structuring element. Here, the base structuring element is assumed to be an O $\times$ O square.
 
 
 The code for computing the connectivity index of an input image with threshold T. 
