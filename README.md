@@ -117,10 +117,132 @@ else:
   print("Fail to reject the null hypothesis")
 ````
 
-### Permutation test for the  $\phi(D_{128})(s)$
+### Permutation test for the  $\phi(D_{128})$
 
 ````python
+from scipy.io import loadmat
+import numpy as np
+import pandas as pd
+import math
+import random
+from scipy import stats
+from mlxtend.evaluate import permutation_test
 
+## Define 2 random distributions
+#Sample Size
+N = 5
+alpha = 0.05
+
+file_name_size_distribution_KO = 'Mitochondial_data/size_dist_KO.csv'
+file_name_size_distribution_WT = 'Mitochondial_data/size_dist_WT.csv'
+
+#sheet =  # sheet name or sheet number or list of sheet numbers and names
+#df = pd.read_excel(file_name, sheet_name=sheet)
+df_KO = pd.read_csv(file_name_size_distribution_KO)
+#df_E50K = pd.read_csv(file_name_size_distribution_E50K)
+df_WT = pd.read_csv(file_name_size_distribution_WT)
+np_array_KO = df_KO.to_numpy()
+np_array_WT = df_WT.to_numpy()
+
+KO_sd = []
+WT_sd = []
+
+for i in range(N):
+  KO_sd.append(np.mean(np_array_KO[i,4:16]))
+  WT_sd.append(np.mean(np_array_WT[i,4:16]))
+
+KO_sd = np.array(KO_sd)
+WT_sd = np.array(WT_sd)
+
+print(KO_sd)
+print(WT_sd)
+
+p_values = []
+
+for i in range(100):
+  p_value = permutation_test(KO_sd, WT_sd, method='approximate', seed=int(random.randint(0,1000)))
+  p_values.append(p_value)
+
+print("Average of p-values: ", np.mean(p_values).round(4))
+print("Standard deviation of p-values: ", np.std(p_values).round(4))
+
+
+## Direct test
+if (np.mean(p_values).round(4) < alpha):
+  print("Reject the null hypothesis")
+else:
+  print("Fail to reject the null hypothesis")
+
+## Strong test
+if (np.mean(p_values).round(4) + np.std(p_values).round(4) < alpha):
+  print("Reject the null hypothesis")
+else:
+  print("Fail to reject the null hypothesis")
+````
+
+### Permutation test for the connectivity index  $C_t$
+
+````python
+from scipy.io import loadmat
+import numpy as np
+import pandas as pd
+import math
+import random
+from scipy import stats
+from mlxtend.evaluate import permutation_test
+
+## Define 2 random distributions
+#Sample Size
+N = 5
+alpha = 0.05
+
+file_name_CI_KO = 'Mitochondial_data/Connectivity_index_KO.csv'
+file_name_CI_WT = 'Mitochondial_data/Connectivity_index_WT.csv'
+
+#sheet =  # sheet name or sheet number or list of sheet numbers and names
+#df = pd.read_excel(file_name, sheet_name=sheet)
+df_KO = pd.read_csv(file_name_CI_KO)
+#df_E50K = pd.read_csv(file_name_size_distribution_E50K)
+df_WT = pd.read_csv(file_name_CI_WT)
+np_array_KO = df_KO.to_numpy()
+np_array_WT = df_WT.to_numpy()
+
+KO_ci = []
+WT_ci = []
+
+#print(np_array_KO)
+#print(np_array_WT)
+
+for i in range(N):
+  KO_ci.append(np.mean(np_array_KO[i,100:151]))
+  WT_ci.append(np.mean(np_array_WT[i,100:151]))
+
+KO_ci = np.array(KO_ci)
+WT_ci = np.array(WT_ci)
+
+print(KO_ci)
+print(WT_ci)
+
+p_values = []
+
+for i in range(100):
+  p_value = permutation_test(KO_ci, WT_ci, method='approximate', seed=int(random.randint(0,1000)))
+  p_values.append(p_value)
+
+print("Average of p-values: ", np.mean(p_values).round(4))
+print("Standard deviation of p-values: ", np.std(p_values).round(4))
+
+## Direct test
+if (np.mean(p_values).round(4) < alpha):
+  print("Reject the null hypothesis")
+else:
+  print("Fail to reject the null hypothesis")
+
+## Strong test
+if (np.mean(p_values).round(4) + np.std(p_values).round(4) < alpha):
+  print("Reject the null hypothesis")
+else:
+  print("Fail to reject the null hypothesis")
 ````
 
 ## References
