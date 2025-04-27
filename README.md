@@ -4,6 +4,8 @@ Implementation of the paper "Morphological multiparameter filtration and persist
 
 ![image](https://github.com/user-attachments/assets/f9e53644-d90e-4407-b679-bfba70e7b81c)
 
+For further information, please contact the corresponding author, Dr. Chuan-Shen Hu: chuanshenhu.official@gmail.com 
+
 ## Abstract
 The complexity of branching and curvilinear morphology of a complete mitochondrial network within each cell is challenging to analyze and quantify. To address this challenge, we developed an image analysis technique using persistent homology with a multiparameter filtration framework, combining image processing techniques in mathematical morphology. We show that such filtrations contain both topological and geometric information about complex cellular organelle structures, which allows a software program to extract meaningful features. Using this information, we also develop a connectivity index that describes the morphology of the branching patterns. As proof of concept, we utilize this approach to study how mitochondrial networks are altered by genetic changes in the Optineurin gene. Mutations in the autophagy gene Optineurin (OPTN) are associated with primary open-angle glaucoma (POAG), amyotrophic lateral sclerosis (ALS), and Paget’s disease of the bone, but the pathophysiological mechanism is unclear.  We utilized the proposed mathematical morphology-based multiparameter filtration and persistent homology approach to analyze and quantitatively compare how changes in the OPTN gene alter mitochondrial structures from their normal interconnected, tubular morphology into scattered, fragmented pieces.
 
@@ -17,7 +19,7 @@ Last released date (YYYY.MM.DD): 2024.08.05 (Matlab version)
 
 ### Code Dependence
 
-The code is programmed in Matlab version 2019 and can be run on both Windows and Mac systems. 
+The code is programmed in MATLAB version 2019 and can be run on both Windows and Mac systems. 
 
 For the persistent homology computation, the software Perseus (https://people.maths.ox.ac.uk/nanda/perseus/index.html) [1] is utilized. To ensure the calculation of persistent homology can be performed on your system, please download the executable file from the website that corresponds to your operating system (Windows, Mac, or Linux). The released code **runPerseus.m** in version 2024.08.05 is designed to run on the Windows system. See the code description for more details.
 
@@ -29,7 +31,7 @@ The folder ``code'' consists of four Matlab M files: **ConnectivityIndex.m**, **
 cmd = ['././perseusWin cubtop ' fname ' ' fname]
 ````
 
-as a string in Matlab. Specifically, this command is used to call the executable file of the Perseus software. Note that this command is for the Windows version of the Perseus software. If you are using Perseus on a Mac system, please download the **perseusMac** file from the official Perseus website and update the command accordingly. Please also ensure that the executable Perseus file is located in the same folder as the four M files.
+as a string in MATLAB. Specifically, this command is used to call the executable file of the Perseus software. Note that this command is for the Windows version of the Perseus software. If you are using Perseus on a Mac system, please download the **perseusMac** file from the official Perseus website and update the command accordingly. Please also ensure that the executable Perseus file is located in the same folder as the four M files.
 
 The M file **NormalizedBettiNumberCurve.m** defines a Matlab function to compute the Normalized Betti Number Curve of a given image based on the opening operations.
 
@@ -47,7 +49,7 @@ SDB = SizeDistrBettiNumber(img, T)
 
 where the object img is a matrix by using **imread()** and T is a given image threshold from 0, 1, ..., to 255.
 
-The M file **ConnectivityIndex.m** defines a Matlab function to compute the Connectivity Index of a given image based on the opening filtration.
+The M file **ConnectivityIndex.m** defines a MATLAB function to compute the Connectivity Index of a given image based on the opening filtration.
 
 ```matlab
 CI = ConnectivityIndex(img, T)
@@ -57,7 +59,7 @@ where the object img is a matrix by using **imread()** and T is a given image th
 
 ## Statistical Analysis
 
-Hypothesis tests of the proposed features of the sampled WT and KO mitochondria images can be demonstrated by the following example codes. Based on the behaviors of normalized Betti curves (NBCs), size distributions (SDs), and connectivity index curves (CI), the statistics of the hypothesis tests are the average values of the WT and KO curves over the range $[a, b]$, where the ranges are selected as [100, 150] (for NBC and CI) and [5,15] (for SD). The test samples consist of 5 curves each from WT and KO mitochondria images.  The null hypothesis, \( H_0 \), states that the distribution of mean values of the WT and KO curves over the range \([a, b]\) are the same. The permutation hypothesis test is performed by the python package {\tt {mlxtend}}~\cite{raschkas_2018_mlxtend}. The $p$-value serves as the target value for determining the test results, and the decision value $\alpha$ is set to be $0.05$. The hypotheses are repeated $100$ times with different random seeds, and average values and standard deviations present the results. Folder ``computed_features'' contains the computed normalized Betti curves, size distributions, and connectivity index curves of WT and KO mitochondria images. The following is Python code for the demonstrations.
+Hypothesis tests of the proposed features of the sampled WT and KO mitochondria images can be demonstrated by the following example codes. Based on the behaviors of normalized Betti curves (NBCs), size distributions (SDs), and connectivity index curves (CI), the statistics of the hypothesis tests are the average values of the WT and KO curves over the range $[a, b]$, where the ranges are selected as [100, 150] (for NBC and CI) and [5,15] (for SD). The test samples consist of 5 curves each from WT and KO mitochondria images.  The null hypothesis, \( H_0 \), states that the distributions of mean values of the WT and KO curves over the range \([a, b]\) are the same. The permutation hypothesis test is performed by the Python package {\tt {mlxtend}}~\cite{raschkas_2018_mlxtend}. The $p$-value serves as the target value for determining the test results, and the decision value $\alpha$ is set to be $0.05$. The hypotheses are repeated $100$ times with different random seeds, and average values and standard deviations present the results. Folder ``computed_features'' contains the computed normalized Betti curves, size distributions, and connectivity index curves of WT and KO mitochondria images. The following is Python code for the demonstrations.
 
 ### Permutation test for the NBC curve $\rho_1^{H,3}$ (with key values 'r_pc_KO_o3' and 'r_pc_WT_o3')
 
