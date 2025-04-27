@@ -4,7 +4,7 @@ Implementation of the paper "Morphological multiparameter filtration and persist
 
 ![image](https://github.com/user-attachments/assets/f9e53644-d90e-4407-b679-bfba70e7b81c)
 
-Website of the paper: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0310157
+Paper website: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0310157
 
 For further information, please contact the corresponding author, Dr. Chuan-Shen Hu: chuanshenhu.official@gmail.com.
 
